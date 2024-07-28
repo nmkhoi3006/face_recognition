@@ -18,7 +18,7 @@ def encode_img(p_img_list):
     encode_list = []
     for img in p_img_list:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        encode = face_recognition.face_locations(img)[0]
+        encode = face_recognition.face_encodings(img)[0]
         encode_list.append(encode)
 
     return encode_list
